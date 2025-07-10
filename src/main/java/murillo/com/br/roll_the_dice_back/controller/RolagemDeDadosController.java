@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
 import murillo.com.br.roll_the_dice_back.model.Dado;
+import murillo.com.br.roll_the_dice_back.model.HistoricoRolagem;
 import murillo.com.br.roll_the_dice_back.service.RolagemDeDadosService;
 
 @RequiredArgsConstructor
@@ -21,8 +22,11 @@ public class RolagemDeDadosController {
   private final RolagemDeDadosService rolagemDeDadosService;
 
   @GetMapping
-  public ResponseEntity<List<Dado>> listarHistorico(){
-    return null;
+  public ResponseEntity<List<HistoricoRolagem>> listarHistorico(){
+
+    List<HistoricoRolagem> listaHistorico = rolagemDeDadosService.listarResultados();
+
+    return ResponseEntity.ok().body(listaHistorico);
   }
 
   @PostMapping

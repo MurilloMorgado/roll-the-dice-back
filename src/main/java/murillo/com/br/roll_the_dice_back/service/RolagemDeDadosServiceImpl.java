@@ -28,9 +28,9 @@ public class RolagemDeDadosServiceImpl implements RolagemDeDadosService {
   }
 
   @Override
-  public List<Dado> listarResultados() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'listarResultados'");
+  public List<HistoricoRolagem> listarResultados() {
+    
+    return rolagemDeDadosRepository.findAll();
   }
 
   @Override
