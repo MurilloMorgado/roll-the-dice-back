@@ -8,5 +8,7 @@ public interface RolagemDeDadosService {
   
   Dado rolarDados(Dado dado);
 
+  void salvarHistorico(Dado dado);
+
   List<Dado> listarResultados();
 }
