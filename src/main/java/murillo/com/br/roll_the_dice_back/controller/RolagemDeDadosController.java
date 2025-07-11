@@ -3,6 +3,7 @@ package murillo.com.br.roll_the_dice_back.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import murillo.com.br.roll_the_dice_back.model.Dado;
 import murillo.com.br.roll_the_dice_back.model.HistoricoRolagem;
 import murillo.com.br.roll_the_dice_back.service.RolagemDeDadosService;
 
+@CrossOrigin
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/dados")
